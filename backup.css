@@ -1,0 +1,398 @@
+:root[data-bs-theme="purple"]{
+    --bs-body-bg: #092c52;
+    --bs-body-color: #ffffff;
+    --bs-navbar-bg: #092c52;
+    --bs-navbar-color: #ffffff;
+    --bs-navbar-brand-color: #ffffff;
+    --bs-link-color: #ffffff;
+    --bs-link-hover-color: #d6b8ff;
+    --bs-nav-link-color: #ffffff;
+    --bs-nav-link-hover-color: #ffffff;
+    
+}
+:root {
+    --primary-color: #FFA500;
+    --secondary-color: #0f172a;
+    --text-color: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+* {
+    font-family: 'Poppins', sans-serif;
+}
+.bg-dark-blue{
+    color: #ffffff;
+}
+.navbar.navbar-expand-lg.bg-purple .navbar-brand{
+    color: #ffffff;
+}
+.navbar.navbar-expand-lg.bg-purple .navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar.navbar-expand-lg.bg-purple .nav-link{
+    color: #ffffff;
+}
+.navbar.navbar-expand-lg.bg-purple .nav-link:hover{
+    color: #d6b8ff;
+}
+.navbar {
+    backdrop-filter: blur(10px);
+    background: var(--glass-bg);
+}
+.icon-h{
+    border-radius: 30%;
+    justify-content: center;    
+}
+.homepage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+}
+
+.image-home {
+    background: url(./images/coding-1841550_1920.jpg) center fixed no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 50;
+    box-shadow: 0 0 50px 0 rgb(0, 0, 0);
+
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 50;
+}
+
+.homepage h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+}
+
+.homepage p  {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+.medsos {
+    opacity: .8;
+}
+.image-profile{
+    box-shadow: 0 0 5px 0 black;
+    width: 100%;
+    object-fit: cover ;
+}
+.aboutpage {
+    width: 100%;
+    background: var(--secondary-color);
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.title-about{
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+}
+.image-about img{
+    width: 100%;
+    box-shadow: 0 0 20px 0 black ;
+}
+
+.skill{
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+}
+.skill img{
+    width: 100%;
+}
+.medsos a i:hover{
+    color: var(--primary-color);
+    transition: .3s ease-in-out;
+}
+.medsos a{
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 20px var(--glass-border), 0 0 60px var(--glass-border) inset;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+}
+.name-about{
+    background-color: var(--glass-bg);
+    padding: 0 5px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
+.stats-card{
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 var(--glass-border) inset;
+}
+.number-stats{
+    border: 1px solid var(--primary-color);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+@media (max-width: 768px) {
+    .homepage {
+        height: auto;
+        padding: 40px 0;
+    }
+    .aboutpage {
+        padding: 40px 0;
+        height: auto;
+    }
+    .logo {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .logo img {
+        width: 50%; 
+    }
+    .homepage h1 {
+        font-size: 2.3rem;
+        text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+    }
+    .homepage p {
+        font-size: 1rem;
+        opacity: 0.8;
+    }
+}
+.contactpage {
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    padding: 50px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.instagram {
+    position: relative; /* Untuk menampung pseudo-element */
+    background: var(--glass-bg); /* Background awal */
+    border: 1px solid var(--glass-border);
+    overflow: hidden; /* Mencegah pseudo-element keluar */
+    display: flex; /* Pastikan konten tetap terlihat */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.instagram::before {
+    content: ""; /* Pseudo-element harus punya konten */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: opacity 0.3s ease-in-out; /* Transisi halus */
+    z-index: -1; /* Posisikan di belakang konten tapi di atas background utama */
+}
+
+.instagram:hover::before {
+    opacity: 1; /* Saat hover, munculkan gradien */
+}
+
+.whatsapp {
+    position: relative; /* Untuk menampung pseudo-element */
+    background: var(--glass-bg); /* Background awal */
+    border: 1px solid var(--glass-border);
+    overflow: hidden; /* Mencegah pseudo-element keluar */
+    display: flex; /* Pastikan konten tetap terlihat */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.whatsapp::before {
+    content: ""; /* Pseudo-element harus punya konten */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #25D366;
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: opacity 0.3s ease-in-out; /* Transisi halus */
+    z-index: -1; /* Posisikan di belakang konten tapi di atas background utama */
+}
+
+.whatsapp:hover::before {
+    opacity: 1; /* Saat hover, munculkan gradien */
+}
+
+.email {
+    position: relative; /* Untuk menampung pseudo-element */
+    background: var(--glass-bg); /* Background awal */
+    border: 1px solid var(--glass-border);
+    overflow: hidden; /* Mencegah pseudo-element keluar */
+    display: flex; /* Pastikan konten tetap terlihat */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.email::before {
+    content: ""; /* Pseudo-element harus punya konten */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #D93025;
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: opacity 0.3s ease-in-out; /* Transisi halus */
+    z-index: -1; /* Posisikan di belakang konten tapi di atas background utama */
+}
+
+.email:hover::before {
+    opacity: 1; /* Saat hover, munculkan gradien */
+}
+
+.facebook {
+    position: relative; /* Untuk menampung pseudo-element */
+    background: var(--glass-bg); /* Background awal */
+    border: 1px solid var(--glass-border);
+    overflow: hidden; /* Mencegah pseudo-element keluar */
+    display: flex; /* Pastikan konten tetap terlihat */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.facebook::before {
+    content: ""; /* Pseudo-element harus punya konten */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1877F2;
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: opacity 0.3s ease-in-out; /* Transisi halus */
+    z-index: -1; /* Posisikan di belakang konten tapi di atas background utama */
+}
+
+.facebook:hover::before {
+    opacity: 1; /* Saat hover, munculkan gradien */
+}
+
+.tiktok {
+    position: relative; /* Untuk menampung pseudo-element */
+    background: var(--glass-bg); /* Background awal */
+    border: 1px solid var(--glass-border);
+    overflow: hidden; /* Mencegah pseudo-element keluar */
+    display: flex; /* Pastikan konten tetap terlihat */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.tiktok::before {
+    content: ""; /* Pseudo-element harus punya konten */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #69C9D0,black, #EE1D52);
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: opacity 0.3s ease-in-out; /* Transisi halus */
+    z-index: -1; /* Posisikan di belakang konten tapi di atas background utama */
+}
+
+.tiktok:hover::before {
+    opacity: 1; /* Saat hover, munculkan gradien */
+}
+
+.youtube {
+    position: relative; /* Untuk menampung pseudo-element */
+    background: var(--glass-bg); /* Background awal */
+    border: 1px solid var(--glass-border);
+    overflow: hidden; /* Mencegah pseudo-element keluar */
+    display: flex; /* Pastikan konten tetap terlihat */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.youtube::before {
+    content: ""; /* Pseudo-element harus punya konten */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FF0000;
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: opacity 0.3s ease-in-out; /* Transisi halus */
+    z-index: -1; /* Posisikan di belakang konten tapi di atas background utama */
+}
+
+.youtube:hover::before {
+    opacity: 1; /* Saat hover, munculkan gradien */
+}
+
+.custom-text-shadow {
+    text-shadow: 
+      -1.5px -1.5px 0 rgba(174, 0, 0, 0.502),  
+       1.5px -1.5px 0 rgba(6, 0, 171, 0.5),
+      -1.5px  1.5px 0 rgba(179, 170, 0, 0.5),
+       1.5px  1.5px 0 rgba(0, 86, 1, 0.5);
+    
+}
+.custom-text-shadow-neon {
+    text-shadow: 0 0 10px rgba(255, 136, 0, 0.8),
+                 0 0 20px rgba(255, 204, 0, 0.6);
+}
+.border-text {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .9);
+}
+.navbar {
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.7);
+}
+.btn-neon {
+    background: var(--primary-color);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--primary-color), 0 0 40px var(--primary-color);
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+.title-contact {
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+}
+.btn-neon:hover {
+    box-shadow: 0 0 20px var(--primary-color), 0 0 60px var(--primary-color);
+}
+.copyright{
+    color: rgba(255, 255, 255, .4);
+}
